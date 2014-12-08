@@ -63,6 +63,15 @@ public class UserController {
 
 		return new ResponseEntity<Integer>(x, HttpStatus.OK);
 	}
+    
+    // ELB Health GET
+    
+    @RequestMapping(value = "/api/v1/elbhealthcheck", method = RequestMethod.GET)
+    public ResponseEntity<Integer> checkELBHealth() {
+        
+        return new ResponseEntity<Integer>(HttpStatus.OK);
+    }
+
 
 	// create user using POST
 	@RequestMapping(value = "api/v1/users", method = RequestMethod.POST)
